@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1
         protected SqlConnection getConnection()
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = LAPTOP-ART5O537\\SQLEXPRESS;database = myHotel;integrated security = True";
+            con.ConnectionString = "data source = TECHCARE\\SQLEXPRESS;database = myHotel;integrated security = True";
             return con;
         }
 

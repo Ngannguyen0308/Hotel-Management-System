@@ -19,6 +19,7 @@ namespace WindowsFormsApplication1
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            uC_Employee1.Visible = false;
             uC_Addroom1.Visible = false;
             uC_CustomerRegistration1.Visible = false;
         }
@@ -59,6 +60,19 @@ namespace WindowsFormsApplication1
         private void uC_Addroom1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCustomerDetails_Click(object sender, EventArgs e)
+        {
+            custumerDetails1.Visible = true;
+            custumerDetails1.BringToFront();
+
+        }
+
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            uC_Employee1.Visible = true;
+            uC_Employee1.BringToFront();
         }
     }
 }

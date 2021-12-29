@@ -42,9 +42,13 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.custumerDetails1 = new WindowsFormsApplication1.All_User_Control.CustumerDetails();
+            this.uC_CustomerCheckOut1 = new WindowsFormsApplication1.All_User_Control.UC_CustomerCheckOut();
             this.uC_CustomerRegistration1 = new WindowsFormsApplication1.All_User_Control.UC_CustomerRegistration();
             this.uC_Addroom1 = new WindowsFormsApplication1.All_User_Control.UC_Addroom();
-            this.uC_CustomerCheckOut1 = new WindowsFormsApplication1.All_User_Control.UC_CustomerCheckOut();
+            this.uC_Employee1 = new WindowsFormsApplication1.All_User_Control.UC_Employee();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -57,9 +61,10 @@
             this.panel1.Controls.Add(this.btnCustomerDetails);
             this.panel1.Controls.Add(this.btnAddRoom);
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(26, 110);
+            this.panel1.Location = new System.Drawing.Point(27, 110);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(216, 632);
+            this.panel1.Size = new System.Drawing.Size(216, 633);
             this.panel1.TabIndex = 0;
             // 
             // btnEmployee
@@ -76,11 +81,13 @@
             this.btnEmployee.ForeColor = System.Drawing.Color.White;
             this.btnEmployee.HoverState.Parent = this.btnEmployee;
             this.btnEmployee.Location = new System.Drawing.Point(20, 428);
+            this.btnEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.ShadowDecoration.Parent = this.btnEmployee;
             this.btnEmployee.Size = new System.Drawing.Size(180, 57);
             this.btnEmployee.TabIndex = 3;
             this.btnEmployee.Text = "Employee";
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // btnCustomerRegistration
             // 
@@ -96,7 +103,8 @@
             this.btnCustomerRegistration.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnCustomerRegistration.ForeColor = System.Drawing.Color.White;
             this.btnCustomerRegistration.HoverState.Parent = this.btnCustomerRegistration;
-            this.btnCustomerRegistration.Location = new System.Drawing.Point(20, 125);
+            this.btnCustomerRegistration.Location = new System.Drawing.Point(20, 126);
+            this.btnCustomerRegistration.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCustomerRegistration.Name = "btnCustomerRegistration";
             this.btnCustomerRegistration.ShadowDecoration.Parent = this.btnCustomerRegistration;
             this.btnCustomerRegistration.Size = new System.Drawing.Size(180, 57);
@@ -119,6 +127,7 @@
             this.btnCheckOut.ForeColor = System.Drawing.Color.White;
             this.btnCheckOut.HoverState.Parent = this.btnCheckOut;
             this.btnCheckOut.Location = new System.Drawing.Point(20, 225);
+            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.ShadowDecoration.Parent = this.btnCheckOut;
             this.btnCheckOut.Size = new System.Drawing.Size(180, 57);
@@ -140,12 +149,14 @@
             this.btnCustomerDetails.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnCustomerDetails.ForeColor = System.Drawing.Color.White;
             this.btnCustomerDetails.HoverState.Parent = this.btnCustomerDetails;
-            this.btnCustomerDetails.Location = new System.Drawing.Point(20, 328);
+            this.btnCustomerDetails.Location = new System.Drawing.Point(20, 327);
+            this.btnCustomerDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCustomerDetails.Name = "btnCustomerDetails";
             this.btnCustomerDetails.ShadowDecoration.Parent = this.btnCustomerDetails;
             this.btnCustomerDetails.Size = new System.Drawing.Size(180, 57);
             this.btnCustomerDetails.TabIndex = 1;
             this.btnCustomerDetails.Text = "Customer Details";
+            this.btnCustomerDetails.Click += new System.EventHandler(this.btnCustomerDetails_Click);
             // 
             // btnAddRoom
             // 
@@ -162,6 +173,7 @@
             this.btnAddRoom.ForeColor = System.Drawing.Color.White;
             this.btnAddRoom.HoverState.Parent = this.btnAddRoom;
             this.btnAddRoom.Location = new System.Drawing.Point(20, 22);
+            this.btnAddRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddRoom.Name = "btnAddRoom";
             this.btnAddRoom.PressedColor = System.Drawing.SystemColors.Window;
             this.btnAddRoom.ShadowDecoration.Parent = this.btnAddRoom;
@@ -172,12 +184,15 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.uC_Employee1);
+            this.panel2.Controls.Add(this.custumerDetails1);
             this.panel2.Controls.Add(this.uC_CustomerCheckOut1);
             this.panel2.Controls.Add(this.uC_CustomerRegistration1);
             this.panel2.Controls.Add(this.uC_Addroom1);
             this.panel2.Location = new System.Drawing.Point(359, 110);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1056, 632);
+            this.panel2.Size = new System.Drawing.Size(1056, 633);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -193,6 +208,7 @@
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageSize = new System.Drawing.Size(30, 30);
             this.btnExit.Location = new System.Drawing.Point(1487, 12);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnExit.ShadowDecoration.Parent = this.btnExit;
@@ -212,6 +228,7 @@
             this.guna2CircleButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton2.Image")));
             this.guna2CircleButton2.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2CircleButton2.Location = new System.Drawing.Point(1444, 12);
+            this.guna2CircleButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CircleButton2.Name = "guna2CircleButton2";
             this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton2.ShadowDecoration.Parent = this.guna2CircleButton2;
@@ -233,10 +250,39 @@
             // 
             this.guna2Elipse3.BorderRadius = 30;
             // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 30;
+            this.guna2Elipse4.TargetControl = this;
+            // 
+            // guna2Elipse5
+            // 
+            this.guna2Elipse5.BorderRadius = 30;
+            this.guna2Elipse5.TargetControl = this;
+            // 
+            // custumerDetails1
+            // 
+            this.custumerDetails1.BackColor = System.Drawing.Color.White;
+            this.custumerDetails1.Location = new System.Drawing.Point(-5, 34);
+            this.custumerDetails1.Margin = new System.Windows.Forms.Padding(5);
+            this.custumerDetails1.Name = "custumerDetails1";
+            this.custumerDetails1.Size = new System.Drawing.Size(1061, 524);
+            this.custumerDetails1.TabIndex = 3;
+            // 
+            // uC_CustomerCheckOut1
+            // 
+            this.uC_CustomerCheckOut1.BackColor = System.Drawing.Color.White;
+            this.uC_CustomerCheckOut1.Location = new System.Drawing.Point(-8, 34);
+            this.uC_CustomerCheckOut1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uC_CustomerCheckOut1.Name = "uC_CustomerCheckOut1";
+            this.uC_CustomerCheckOut1.Size = new System.Drawing.Size(1061, 524);
+            this.uC_CustomerCheckOut1.TabIndex = 2;
+            // 
             // uC_CustomerRegistration1
             // 
             this.uC_CustomerRegistration1.BackColor = System.Drawing.Color.White;
-            this.uC_CustomerRegistration1.Location = new System.Drawing.Point(22, 35);
+            this.uC_CustomerRegistration1.Location = new System.Drawing.Point(21, 34);
+            this.uC_CustomerRegistration1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uC_CustomerRegistration1.Name = "uC_CustomerRegistration1";
             this.uC_CustomerRegistration1.Size = new System.Drawing.Size(1000, 450);
             this.uC_CustomerRegistration1.TabIndex = 1;
@@ -244,30 +290,32 @@
             // uC_Addroom1
             // 
             this.uC_Addroom1.BackColor = System.Drawing.Color.White;
-            this.uC_Addroom1.Location = new System.Drawing.Point(22, 35);
+            this.uC_Addroom1.Location = new System.Drawing.Point(21, 34);
+            this.uC_Addroom1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uC_Addroom1.Name = "uC_Addroom1";
             this.uC_Addroom1.Size = new System.Drawing.Size(1000, 450);
             this.uC_Addroom1.TabIndex = 0;
             // 
-            // uC_CustomerCheckOut1
+            // uC_Employee1
             // 
-            this.uC_CustomerCheckOut1.BackColor = System.Drawing.Color.White;
-            this.uC_CustomerCheckOut1.Location = new System.Drawing.Point(22, 22);
-            this.uC_CustomerCheckOut1.Name = "uC_CustomerCheckOut1";
-            this.uC_CustomerCheckOut1.Size = new System.Drawing.Size(1062, 524);
-            this.uC_CustomerCheckOut1.TabIndex = 2;
+            this.uC_Employee1.BackColor = System.Drawing.Color.White;
+            this.uC_Employee1.Location = new System.Drawing.Point(0, 34);
+            this.uC_Employee1.Name = "uC_Employee1";
+            this.uC_Employee1.Size = new System.Drawing.Size(1061, 524);
+            this.uC_Employee1.TabIndex = 4;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(1680, 1050);
+            this.ClientSize = new System.Drawing.Size(1612, 772);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2CircleButton2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
@@ -294,5 +342,9 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private All_User_Control.UC_CustomerCheckOut uC_CustomerCheckOut1;
+        private All_User_Control.CustumerDetails custumerDetails1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
+        private All_User_Control.UC_Employee uC_Employee1;
     }
 }
